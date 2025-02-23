@@ -4,6 +4,8 @@ import
     createWebHistory
 } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import JobsView
+ from '@/views/JobsView.vue';
 
 const router
  = createRouter
@@ -14,6 +16,11 @@ const router
             path: '/',
             name: 'home',
             component: HomeView
+        },
+        {
+            path: '/jobs',
+            name: 'jobs',
+            component: JobsView
         },
       ]
 });
