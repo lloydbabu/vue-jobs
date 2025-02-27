@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <NavBar />
+  <NavBar data-theme="light"/>
   <RouterView/>
 </template>
 
