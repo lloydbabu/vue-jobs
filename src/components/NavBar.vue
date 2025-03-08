@@ -1,7 +1,15 @@
 <script setup lang="ts">
+/**
+ * Import the logo image and necessary functions from vue-router.
+ */
 import logo from '@/assets/img/logo.png'
 import { RouterLink, useRoute } from 'vue-router'
 
+/**
+ * Function to check if the given route path is active.
+ * @param routePath - The path of the route to check.
+ * @returns True if the route is active, false otherwise.
+ */
 const isActiveLink = (routePath: string) => {
   const route = useRoute()
   return route.path === routePath;
@@ -9,6 +17,7 @@ const isActiveLink = (routePath: string) => {
 </script>
 
 <template>
+  <!-- Navigation bar component -->
   <nav class="bg-green-700 border-b border-green-500">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="flex h-20 items-center justify-between">
@@ -20,6 +29,7 @@ const isActiveLink = (routePath: string) => {
           </a>
           <div class="md:ml-auto">
             <div class="flex space-x-2">
+              <!-- Router links for navigation -->
               <RouterLink
                 to="/"
                 :class="[ isActiveLink('/') ? 'bg-green-900' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'rounded-md', 'px-3', 'py-2']"

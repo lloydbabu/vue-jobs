@@ -1,6 +1,7 @@
 import pluginVue from 'eslint-plugin-vue'
 import vueTsEslintConfig from '@vue/eslint-config-typescript'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import tsdocPlugin from 'eslint-plugin-tsdoc'
 
 export default [
   {
@@ -16,4 +17,12 @@ export default [
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
   skipFormatting,
+  {
+    plugins: {
+      tsdoc: tsdocPlugin
+    },
+    rules: {
+      'tsdoc/syntax': 'warn'
+    }
+  }
 ]
