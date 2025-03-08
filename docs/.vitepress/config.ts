@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/docs/",
   title: "Vue Jobs",
   description: "A Vue Jobs Documentation",
   themeConfig: {
